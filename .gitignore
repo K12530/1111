@@ -1,1 +1,4 @@
 *.suo
+FourOperator/Add/Debug/
+FourOperator/.vs/
+*.user
