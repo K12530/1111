@@ -3,13 +3,10 @@
 
 int Mul(int a, int b)
 {
-	if ((a > 0 && b < 0 && a * b>0) || (a < 0 && b > 0 && a * b > 0) || (a > 0 && b > 0 && a * b < 0) || (a < 0 && b < 0 && a * b < 0))
+	if ((a % 10000) * (b % 10000) != (a * b) % 10000)
 	{
-		if ((a % 100) * (b % 100) != (a * b) % 100)
-		{
-			printf("输出溢出\r\n");
-			return 0;
-		}
+		printf("输出溢出\r\n");
+		return 0;
 	}
 	return a * b;
 }
