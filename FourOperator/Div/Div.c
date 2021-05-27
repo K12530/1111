@@ -6,7 +6,7 @@
 #include "../Mul/Mul.h"
 
 
-#pragma comment(lib,"Add.lib")
+#pragma comment(lib,"../Debug/Add.lib")
 typedef int(*fun)(int, int);
 
 int main()

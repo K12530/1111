@@ -17,3 +17,8 @@ FourOperator/Sub/Debug/
 FourOperator/Mul/
 FourOperator/Debug/Mul.exp
 FourOperator/Debug
+FourOperator/UnitTest1/Debug/UnitTest1.tlog/CL.read.1.tlog
+FourOperator/UnitTest1/
+FourOperator/Div/
+*.sdf
+*.ipch
