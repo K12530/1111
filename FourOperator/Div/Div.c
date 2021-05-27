@@ -1,14 +1,41 @@
+#include <Windows.h>
 #include <stdio.h>
 #include "Div.h"
+#include "../Add/Add.h"
+#include "../Sub/Sub.h"
+#include "../Mul/Mul.h"
 
-#define INT_MAX 2147483647
-#define INT_MIN -INT_MAX-1
+
+#pragma comment(lib,"Add.lib")
+typedef int(*fun)(int, int);
 
 int main()
 {
-	printf("%d", Div(2147483648, -1));
+	fun Mul = NULL;
+
+	HINSTANCE hInst = LoadLibrary(TEXT("Mul.dll"));
+	if (hInst != NULL)
+	{
+		Mul = (fun)GetProcAddress(hInst, "Mul");
+	}
+	else
+	{
+		printf("∂ØÃ¨ø‚º”‘ÿ ß∞‹\r\n");
+	}
+
+	printf("%d\r\n", Div(10, 5));
+	printf("%d\r\n", Add(10, 5));
+	printf("%d\r\n", Sub(10, 5));
+	printf("%d\r\n", Mul(10, 5));
+
+	if (hInst != NULL)
+	{
+		FreeLibrary(hInst);
+	}
+
 	return 0;
 }
+
 
 int Div(int a, int b)
 {
@@ -24,4 +51,3 @@ int Div(int a, int b)
 	}
 	return a / b;
 }
-
