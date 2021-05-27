@@ -1,1 +1,6 @@
 *.suo
+FourOperator/.vs/
+FourOperator/Add/
+FourOperator/Sub/Debug/vc142.idb
+FourOperator/Sub/Debug/
+FourOperator/Mul/
